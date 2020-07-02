@@ -1,0 +1,30 @@
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+
+// props like in ReactJS (props) and {props. ...}
+const Header = (props) => {
+  return (
+    <View style={styles.header}>
+      <Text style={styles.text}>{props.title}</Text>
+    </View>
+  );
+};
+
+Header.defaultProps = {
+  title: 'Shopping List',
+};
+
+const styles = StyleSheet.create({
+  header: {
+    height: 60,
+    padding: 15,
+    backgroundColor: 'darkslateblue',
+  },
+  text: {
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center',
+  },
+});
+
+export default Header;
